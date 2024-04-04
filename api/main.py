@@ -11,7 +11,7 @@ from langchain.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 
 from flask import Flask, request, jsonify
-import constants
+# import constants
 app = Flask(__name__)
 
 chat_history = None
@@ -36,8 +36,8 @@ def handle_request():
 def init():
     global chat_history
     global chain
-    # api_key = os.getenv("OPENAI_API_KEY")
-    api_key = constants.APIKEY
+    api_key = os.getenv("OPENAI_API_KEY")
+    # api_key = constants.APIKEY
     os.environ["OPENAI_API_KEY"] = api_key
 
     # Enable to save to disk & reuse the model (for repeated queries on the same data)
