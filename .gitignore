@@ -5,3 +5,4 @@ capstone1_key.pem
 capstone_key.pem
 vercel.json
 test.py
+constants.py
